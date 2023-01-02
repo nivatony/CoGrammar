@@ -1,23 +1,22 @@
-# docker-compose-ngnix
-![docker-nivel](https://user-images.githubusercontent.com/84384521/150500166-aea23cf9-aff5-48d7-a2ad-9ee419be457a.jpg)
-this is how my stack look like :
-docker-tutorial/
-├── .docker/
-│   ├── backend/
-│   ├── mysql/
-│   └── nginx/
-│       ├── certs/
-│       │   ├── .gitignore
-│       │   ├── demo.test.crt
-│       │   └── demo.test.key
-│       ├── conf.d/
-│       └── Dockerfile
-├── src/
-├── .env
-├── .env.example
-├── .gitignore ( i have deleted this)
-├── demo
-└── docker-compose.yml
+# CoGrammar
 
-after any change please do : demo down && demo start
-to run and stop the stack we need to use docker-compse up -d ( to run it in the background)
+This is a high level overview of a python
+Script which will do the following :
+
+empty dictionary which holds subsets
+    # of all anagrams together
+
+let verify if key exist in dictionary
+        # or not. If yes then simply append the
+        # mystr into the list of it's corresponding. 
+
+
+
+# need to check: 
+* key. If not then map empty list onto
+ * key and then start appending values
+
+
+Therefore, the function traverse dictionary and concatenate values
+ of keys together.
+Final will result to output the result. 
