@@ -1,0 +1,39 @@
+Anagram python
+
+
+
+
+def GroupAnagram(input):
+     
+    # gather all the anagram 
+    dict = {}
+ 
+    # iterate list of strings
+    for myStr in input:
+         
+        # sorted(iterable) method accepts any
+        # iterable and returns list of items
+        # in ascending order
+        key = ''.join(sorted(myStr))
+         
+        # let Check if the key exist or note append it to its corresponding
+        # key. If not then map empty list onto
+        # key and then start appending values
+        if key in dict.keys():
+            dict[key].append(mySrt)
+        else:
+            dict[key] = []
+            dict[key].append(myStr)
+ 
+    # dictionary and concatenate values
+    # of keys together
+    output = ""
+    for key,value in dict.items():
+        output = output + ' '.join(value) + ' '
+ 
+    return output
+ 
+# Driver function
+if __name__ == "__main__":
+    input=['cat', 'dog', 'tac', 'god', 'act']
+    print (GroupAnagram(input))
