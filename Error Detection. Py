@@ -1,0 +1,38 @@
+
+# insert 0 into the bit position
+def insert_zero(num, pos):
+    mask = pow(2, pos - 1) - 1 
+    t = num & mask
+    num = (num >> (pos - 1)) << pos
+    num = num + t
+    return num
+
+# create the bit positions first, set the parity bits to 0
+def setup(data):    
+    bits = hamming(num_parity_bits)
+    for b in bits:
+        data = insert_zero(data, b)   
+    return data
+
+# find the bit positions that have their bits set
+def pos(num):
+    r = []
+    for i in range(1,num.bit_length()+1):
+        if num & 1: r.append(i)
+        num = num >> 1        
+    return r
+
+# set the parity bits, given the bits to set, and the block to set
+def set_parity(bits, block):
+    for i, n in enumerate(hamming(num_parity_bits)):
+        if bits & pow(2, i): 
+            block = block | pow(2, n-1)
+    return block 
+  
+# encode 
+def encode(d):
+    data = setup(d)
+    positions = pos(data)
+    bits = xor(positions)
+    encoded = set_parity(bits, data)
+    return encoded 
