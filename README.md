@@ -20,3 +20,9 @@ let verify if key exist in dictionary
 Therefore, the function traverse dictionary and concatenate values
  of keys together.
 Final will result to output the result. 
+
+
+#Java option
+
+We need to create a recursive function
+That need to read our data as per our definition. 
